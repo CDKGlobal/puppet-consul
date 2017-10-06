@@ -196,19 +196,6 @@ class consul (
   $real_ui_download_url = pick($ui_download_url, "${ui_download_url_base}${version}/${package_name}_${version}_web_ui.${ui_download_extension}")
   # lint:endignore
 
-  validate_bool($purge_config_dir)
-  validate_bool($manage_user)
-  #validate_array($extra_groups)
-  validate_bool($manage_service)
-  validate_bool($restart_on_change)
-  validate_hash($config_hash)
-  validate_hash($config_defaults)
-  validate_bool($pretty_config)
-  validate_integer($pretty_config_indent)
-  validate_hash($services)
-  validate_hash($watches)
-  validate_hash($checks)
-  validate_hash($acls)
 
   $config_hash_real = deep_merge($config_defaults, $config_hash)
 
