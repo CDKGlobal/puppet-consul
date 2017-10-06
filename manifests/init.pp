@@ -207,7 +207,7 @@ class consul (
   else {
     $user_real = $user
     $group_real = $group
-    $init_style_real = $init_style
+    $init_style_real = 'unmanaged'
   }
 
   if $config_hash_real['data_dir'] {
